@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>pilots_brothers_safe</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="fonts\Boncegro.otf" />
+    <None Remove="src\button_default.png" />
+    <None Remove="src\button_hover.png" />
+    <None Remove="src\home.png" />
+    <None Remove="src\icons\question mark.png" />
+    <None Remove="src\icons\tutorial.png" />
+    <None Remove="src\indented_input_field.png" />
+    <None Remove="src\logo.jpg" />
+    <None Remove="src\refresh.png" />
+    <None Remove="src\safe\Door latches.png" />
+    <None Remove="src\safe\Safe body.png" />
+    <None Remove="src\safe\Safe door opened.png" />
+    <None Remove="src\safe\Safe door.png" />
+    <None Remove="src\safe\Valve.png" />
+    <None Remove="src\squared_button.png" />
+    <None Remove="src\squared_button_hover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="fonts\Boncegro.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\buttons\button_default.png" />
+    <Resource Include="src\buttons\button_hover.png" />
+    <Resource Include="src\icons\home.png" />
+    <Resource Include="src\buttons\indented_input_field.png" />
+    <Resource Include="src\icons\question mark.png" />
+    <Resource Include="src\icons\tutorial.png" />
+    <Resource Include="src\logo.jpg" />
+    <Resource Include="src\icons\refresh.png" />
+    <Resource Include="src\safe\Door latches.png" />
+    <Resource Include="src\safe\Safe body.png" />
+    <Resource Include="src\safe\Safe door opened.png" />
+    <Resource Include="src\safe\Safe door.png" />
+    <Resource Include="src\safe\Valve.png" />
+    <Resource Include="src\buttons\squared_button.png" />
+    <Resource Include="src\buttons\squared_button_hover.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="views\PlayPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="views\PlayPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

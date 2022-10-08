@@ -1,0 +1,9 @@
+﻿<Application x:Class="pilots_brothers_safe.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:pilots_brothers_safe"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <FontFamily x:Key="Boncegro">pack://application:,,,/fonts/#Boncegro FF 4F</FontFamily>
+    </Application.Resources>
+</Application>

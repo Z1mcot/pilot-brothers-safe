@@ -1,0 +1,57 @@
+﻿<Page x:Class="pilots_brothers_safe.views.TutorialPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:pilots_brothers_safe.views"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="TutorialPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/styles/ButtonHover.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="250" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        
+        <Label Grid.Row="0" Content="Правила игры" FontFamily="{StaticResource Boncegro}" FontSize="72" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" FontFamily="{StaticResource Boncegro}" FontSize="36" TextWrapping="WrapWithOverflow" Margin="30, 10" TextAlignment="Justify">
+            На сейфе множество поворачиваемых рукояток, которые могут быть расположены горизонтально или вертикально.
+        </TextBlock>
+        <TextBlock Grid.Row="2" FontFamily="{StaticResource Boncegro}" FontSize="36" TextWrapping="WrapWithOverflow" Margin="30, 10" TextAlignment="Justify">
+            Сейф открывается, только если удается расположить все ручки параллельно друг другу (т.е. все вертикально или все горизонтально).
+        </TextBlock>
+        <Grid Grid.Row="3" x:Name="ButtonsTutorial">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Назначения кнопок" HorizontalAlignment="Center" FontFamily="{StaticResource Boncegro}" FontSize="46" />
+            <Image Grid.Row="1" Margin="316,0,352,0" VerticalAlignment="Center" Height="144" Stretch="Uniform" Source="/src/icons/tutorial.png" RenderTransformOrigin="0.516,0.5" />
+        </Grid>
+
+        <Button Grid.Row="5" Style="{StaticResource NormalButtonStyle}" x:Name="BtnConfirm" Height="60" FontSize="24" Click="BtnConfirm_Click" BorderThickness="0,0,0,0" BorderBrush="{x:Null}">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/src/buttons/button_default.png" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.Content>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Понятно" FontFamily="{StaticResource Boncegro}" FontSize="32"/>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Page>

@@ -1,0 +1,76 @@
+﻿<Page x:Class="pilots_brothers_safe.views.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:pilots_brothers_safe.views"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="SettingsPage">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/styles/ButtonHover.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Button Margin="20,20" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource SquaredButtonStyle}" x:Name="BtnMainMenu" Width="60" Height="60" BorderBrush="{x:Null}" Click="BtnMainMenu_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/src/squared_button.png" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.Content>
+                <Image Source="/src/home.png" Width="50" Opacity="0.65" />
+            </Button.Content>
+        </Button>
+        <Grid Height="300" Width="498" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Размер поля" HorizontalAlignment="Center" Grid.Row="0" FontFamily="{StaticResource Boncegro}" FontSize="46" />
+            <Grid x:Name="MiddleSection" Grid.Row="1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/src/indented_input_field.png" Stretch="Uniform" />
+                </Grid.Background>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Slider x:Name="SizeSlider" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Top" Width="438" Height="26" AutoToolTipPlacement="TopLeft" Minimum="3" Maximum="9" SmallChange="1" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Grid.Row="0" Margin="0,11,0,0"/>
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="0" Content="3" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="1" Content="4" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="2" Content="5" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="3" Content="6" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="4" Content="7" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="5" Content="8" HorizontalAlignment="Center" Foreground="White" />
+                <Label FontFamily="{StaticResource Boncegro}" FontSize="18" Grid.Row="1" Grid.Column="6" Content="9" HorizontalAlignment="Center" Foreground="White" />
+            </Grid>
+            <Button Style="{StaticResource NormalButtonStyle}" Grid.Row="2" x:Name="BtnSaveSettings" Height="100" Width="250" FontSize="24" Click="BtnSaveSettings_Click" BorderThickness="0,0,0,0" BorderBrush="{x:Null}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="/src/button_default.png" Stretch="Uniform"/>
+                </Button.Background>
+                <Button.Content>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Сохранить" FontFamily="{StaticResource Boncegro}" FontSize="44"/>
+                </Button.Content>
+
+            </Button>
+        </Grid>
+
+    </Grid>
+</Page>
